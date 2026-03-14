@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studioflow — CEO Setup Guide</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: #0a0a0f;
+    color: #e4e4ef;
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #12121a;
+    border-radius: 16px;
+    padding: 48px;
+    border: 1px solid #2a2a40;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  }
+  
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #2dd4bf, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    color: #e4e4ef;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #2a2a40;
+  }
+  
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: #2dd4bf;
+  }
+  
+  p { margin-bottom: 12px; color: #a0a0b8; font-size: 15px; }
+  
+  a { color: #818cf8; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  
+  blockquote {
+    border-left: 3px solid #818cf8;
+    padding: 12px 16px;
+    margin: 16px 0;
+    background: rgba(129, 140, 248, 0.08);
+    border-radius: 0 8px 8px 0;
+    font-size: 14px;
+    color: #a0a0b8;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 13px;
+  }
+  
+  tr { border-bottom: 1px solid #2a2a40; }
+  tr:hover { background: rgba(45, 212, 191, 0.04); }
+  
+  td {
+    padding: 10px 12px;
+    color: #a0a0b8;
+  }
+  
+  td:first-child { font-weight: 500; color: #e4e4ef; }
+  
+  ul, ol {
+    margin: 8px 0 16px 24px;
+    color: #a0a0b8;
+    font-size: 15px;
+  }
+  
+  li {
+    margin-bottom: 6px;
+    padding-left: 4px;
+  }
+  
+  li.nested {
+    margin-left: 20px;
+    list-style-type: circle;
+  }
+  
+  code.inline {
+    background: #1a1a2e;
+    border: 1px solid #2a2a40;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: #2dd4bf;
+  }
+  
+  pre.code-block {
+    background: #0a0a0f;
+    border: 1px solid #2a2a40;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 12px 0;
+    overflow-x: auto;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  
+  pre.code-block code {
+    font-family: 'JetBrains Mono', monospace;
+    color: #a0a0b8;
+  }
+  
+  hr {
+    border: none;
+    border-top: 1px solid #2a2a40;
+    margin: 32px 0;
+  }
+  
+  input[type="checkbox"] {
+    accent-color: #2dd4bf;
+    margin-right: 8px;
+    transform: scale(1.2);
+  }
+  
+  strong { color: #e4e4ef; }
+
+  .print-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: linear-gradient(135deg, #2dd4bf, #818cf8);
+    color: #0a0a0f;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(45, 212, 191, 0.3);
+    transition: transform 0.2s;
+  }
+  .print-btn:hover { transform: scale(1.05); }
+  
+  @media print {
+    body { background: white; color: #1a1a2e; padding: 0; }
+    .container { box-shadow: none; border: none; padding: 20px; }
+    h1 { -webkit-text-fill-color: #1a1a2e; background: none; }
+    h2 { color: #1a1a2e; }
+    h3 { color: #0d9488; }
+    p, li, td { color: #374151; }
+    code.inline { background: #f3f4f6; color: #0d9488; border-color: #d1d5db; }
+    pre.code-block { background: #f3f4f6; border-color: #d1d5db; }
+    pre.code-block code { color: #374151; }
+    blockquote { background: #f0f9ff; border-color: #6366f1; }
+    tr { border-color: #d1d5db; }
+    .print-btn { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Studioflow — CEO Setup Guide</h1>
+<blockquote><strong>Everything you need to sign up for to make Studioflow fully operational.</strong></blockquote>
+<blockquote>Think of this like setting up utilities for a new house — each service powers a different part of the app.</blockquote>
+<hr>
+<h2>Quick Summary</h2>
+<tr><td>#</td><td>Service</td><td>What It Powers</td><td>Cost</td><td>Time to Set Up</td><td>Priority</td></tr>
+<tr><td>1</td><td><strong>Supabase</strong></td><td>Database, logins, file storage</td><td>Free</td><td>10 min</td><td>🔴 REQUIRED</td></tr>
+<tr><td>2</td><td><strong>Vercel</strong></td><td>Hosting (puts your app on the internet)</td><td>Free</td><td>5 min</td><td>🔴 REQUIRED</td></tr>
+<tr><td>3</td><td><strong>Square</strong></td><td>Accepting payments from clients</td><td>Free (2.6% + 10¢/sale)</td><td>10 min</td><td>🟡 HIGH</td></tr>
+<tr><td>4</td><td><strong>Resend</strong></td><td>Sending emails to clients</td><td>Free (3,000/mo)</td><td>5 min</td><td>🟡 HIGH</td></tr>
+<tr><td>5</td><td><strong>Google Cloud</strong></td><td>Google Drive file storage + Calendar sync</td><td>Free</td><td>20 min</td><td>🟡 HIGH</td></tr>
+<tr><td>6</td><td><strong>Google Gemini</strong></td><td>AI features (email writing, captions)</td><td>Free</td><td>5 min</td><td>🟢 MEDIUM</td></tr>
+<tr><td>7</td><td><strong>Sentry</strong></td><td>Automatic error alerts (if something breaks)</td><td>Free</td><td>5 min</td><td>🟢 MEDIUM</td></tr>
+<tr><td>8</td><td><strong>Tawk.to</strong></td><td>Live chat widget on your site</td><td>Free</td><td>5 min</td><td>🟢 LOW</td></tr>
+<tr><td>9</td><td><strong>Firebase</strong></td><td>Push notifications to phones</td><td>Free</td><td>15 min</td><td>🟢 LOW</td></tr>
+<tr><td>10</td><td><strong>Custom Domain</strong></td><td>YourStudio.com (instead of random Vercel URL)</td><td>~$12/yr</td><td>10 min</td><td>🟢 LOW</td></tr>
+<p><strong>Total Monthly Cost: $0</strong> (unless you process payments, then Square takes 2.6% + 10¢ per online transaction)</p>
+<hr>
+<h2>1. 🔴 Supabase (Your Database)</h2>
+<h3>What is it?</h3>
+<p>Think of Supabase as the <strong>filing cabinet</strong> for your entire business. Every contact, every invoice, every appointment — it all lives here. It also handles user logins.</p>
+<h3>How to sign up:</h3>
+<ol>
+<li>Go to <strong><a href="https://supabase.com" target="_blank">supabase.com</a></strong></li>
+<li>Click <strong>"Start your project"</strong> (green button)</li>
+<li>Sign in with your <strong>GitHub account</strong> (if you don't have one, create one at <a href="https://github.com" target="_blank">github.com</a> first — it's free and takes 2 minutes)</li>
+<li>Click <strong>"New Project"</strong></li>
+<li>Fill in:</li>
+<li><strong>Name:</strong> <code class="inline">studioflow</code></li>
+<li><strong>Database Password:</strong> Pick something strong and <strong>SAVE IT</strong> somewhere safe (you'll need it later)</li>
+<li><strong>Region:</strong> Pick the closest one to you (probably <code class="inline">US East</code>)</li>
+<li>Click <strong>"Create new project"</strong> and wait ~2 minutes</li>
+</ol>
+<h3>What to give the developer:</h3>
+<p>After your project is created, go to <strong>Settings → API</strong> and copy these two values:</p>
+<ul>
+<li><strong>Project URL</strong> — looks like <code class="inline">https://xyzxyz.supabase.co</code></li>
+<li><strong>anon/public key</strong> — a long string starting with <code class="inline">eyJ...</code></li>
+</ul>
+<blockquote>💡 <strong>These go into the app as:</strong></blockquote>
+<blockquote><code class="inline">NEXT_PUBLIC_SUPABASE_URL=https://xyzxyz.supabase.co</code></blockquote>
+<blockquote><code class="inline">NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJ...</code></blockquote>
+<h3>Free tier limits:</h3>
+<ul>
+<li>500 MB database storage (plenty for thousands of contacts)</li>
+<li>1 GB file storage</li>
+<li>50,000 monthly active users</li>
+<li>Unlimited API requests</li>
+</ul>
+<hr>
+<h2>2. 🔴 Vercel (Your Hosting)</h2>
+<h3>What is it?</h3>
+<p>Vercel is like <strong>renting a storefront</strong> — it puts your app on the internet so anyone with the link can use it.</p>
+<h3>How to sign up:</h3>
+<ol>
+<li>Go to <strong><a href="https://vercel.com" target="_blank">vercel.com</a></strong></li>
+<li>Click <strong>"Sign Up"</strong></li>
+<li>Sign in with your <strong>GitHub account</strong> (same one from Step 1)</li>
+<li>That's it! You now have a Vercel account</li>
+</ol>
+<h3>How to deploy:</h3>
+<p>Your developer will connect the GitHub repo to Vercel. Once connected:</p>
+<ul>
+<li>Every time code is updated, the app automatically re-deploys</li>
+<li>You get a free URL like <code class="inline">studioflow-abc123.vercel.app</code></li>
+<li>Later you can add a custom domain (see Step 10)</li>
+</ul>
+<h3>Free tier limits:</h3>
+<ul>
+<li>100 GB bandwidth per month</li>
+<li>Automatic SSL (the padlock icon in browsers)</li>
+<li>Unlimited deployments</li>
+</ul>
+<hr>
+<h2>3. 🟡 Square (Payments)</h2>
+<h3>What is it?</h3>
+<p>Square lets your <strong>clients pay you</strong> directly through the app. When you send an invoice, they click "Pay Now" and enter their card. Money goes straight to your bank account. If you already use Square at your studio, this connects right to that same account!</p>
+<h3>How to sign up:</h3>
+<ol>
+<li>Go to <strong><a href="https://squareup.com" target="_blank">squareup.com</a></strong> (you probably already have an account!)</li>
+<li>If you don't have one, click <strong>"Get Started"</strong> and follow the prompts</li>
+<li>Once logged in, go to <strong><a href="https://developer.squareup.com" target="_blank">developer.squareup.com</a></strong></li>
+<li>Click <strong>"+"</strong> to create a new application</li>
+<li>Name it <code class="inline">Studioflow</code> and click <strong>"Save"</strong></li>
+<li>You'll see your <strong>Application ID</strong> on the app dashboard</li>
+<li>Go to the <strong>"Credentials"</strong> tab:</li>
+<li>Copy the <strong>Access Token</strong> (use Sandbox first for testing, then switch to Production)</li>
+<li>Go to the <strong>"Webhooks"</strong> tab:</li>
+<li>Click <strong>"Add webhook"</strong></li>
+<li>URL: <code class="inline">https://your-app-url.com/api/v1/webhooks/square</code></li>
+<li>Events: select <code class="inline">payment.completed</code> and <code class="inline">refund.created</code></li>
+<li>Copy the <strong>Signature Key</strong></li>
+</ol>
+<h3>What to give the developer:</h3>
+<ul>
+<li><strong>Access Token</strong> — starts with <code class="inline">EAAAl...</code> (NEVER share this publicly!)</li>
+<li><strong>Webhook Signature Key</strong> — used to verify incoming notifications</li>
+</ul>
+<blockquote>💡 <strong>These go into the app as:</strong></blockquote>
+<blockquote><code class="inline">SQUARE_ACCESS_TOKEN=EAAAl...</code></blockquote>
+<blockquote><code class="inline">SQUARE_ENVIRONMENT=production</code></blockquote>
+<blockquote><code class="inline">SQUARE_WEBHOOK_SIGNATURE_KEY=your-signature-key</code></blockquote>
+<h3>Cost:</h3>
+<ul>
+<li>No monthly fee</li>
+<li><strong>2.6% + 10¢ per online transaction</strong> (cheaper than Stripe!)</li>
+<li>Example: Client pays $500 → you pay $13.10 in fees → you keep $486.90</li>
+<li>If you already use Square for in-person payments, those rates stay the same</li>
+</ul>
+<hr>
+<h2>4. 🟡 Resend (Email Sending)</h2>
+<h3>What is it?</h3>
+<p>Resend is the <strong>mailman</strong> for your app. It sends emails like invoice notifications, appointment reminders, and marketing campaigns <em>from your business email address</em>.</p>
+<h3>How to sign up:</h3>
+<ol>
+<li>Go to <strong><a href="https://resend.com" target="_blank">resend.com</a></strong></li>
+<li>Click <strong>"Get Started"</strong></li>
+<li>Sign up with your email</li>
+<li>Go to <strong>API Keys</strong> → Click <strong>"Create API Key"</strong></li>
+<li>Name it <code class="inline">studioflow</code> and copy the key</li>
+</ol>
+<h3>What to give the developer:</h3>
+<ul>
+<li><strong>API Key</strong> — starts with <code class="inline">re_...</code></li>
+</ul>
+<blockquote>💡 <strong>This goes into the app as:</strong></blockquote>
+<blockquote><code class="inline">RESEND_API_KEY=re_...</code></blockquote>
+<h3>Optional but recommended:</h3>
+<p>To send emails FROM your own domain (like <code class="inline">hello@yourstudio.com</code> instead of <code class="inline">onboarding@resend.dev</code>):</p>
+<ol>
+<li>In Resend, go to <strong>Domains</strong> → <strong>Add Domain</strong></li>
+<li>Enter your domain (e.g., <code class="inline">yourstudio.com</code>)</li>
+<li>Add the <strong>DNS records</strong> they give you to your domain registrar</li>
+<li>Wait for verification (usually 5-30 minutes)</li>
+</ol>
+<h3>Free tier limits:</h3>
+<ul>
+<li>3,000 emails per month</li>
+<li>100 emails per day</li>
+<li>1 custom domain</li>
+</ul>
+<hr>
+<h2>5. 🟡 Google Cloud (Drive + Calendar)</h2>
+<h3>What is it?</h3>
+<p>This powers two features:</p>
+<ul>
+<li><strong>Google Drive:</strong> Automatically creates folders for each client, stores contracts/images</li>
+<li><strong>Google Calendar:</strong> Syncs your appointments between Studioflow and Google Calendar</li>
+</ul>
+<h3>How to sign up:</h3>
+<ol>
+<li>Go to <strong><a href="https://console.cloud.google.com" target="_blank">console.cloud.google.com</a></strong></li>
+<li>Sign in with a <strong>Google account</strong> (your Gmail works fine)</li>
+<li>Click <strong>"Select a Project"</strong> → <strong>"New Project"</strong></li>
+<li>Name: <code class="inline">Studioflow</code> → Click <strong>"Create"</strong></li>
+<li>Now enable the APIs you need:</li>
+<li>Search for <strong>"Google Drive API"</strong> → Click <strong>Enable</strong></li>
+<li>Search for <strong>"Google Calendar API"</strong> → Click <strong>Enable</strong></li>
+<li>Create credentials:</li>
+<li>Go to <strong>APIs & Services → Credentials</strong></li>
+<li>Click <strong>"Create Credentials" → "OAuth Client ID"</strong></li>
+<li>You may need to <strong>configure the consent screen</strong> first:</li>
+<li>User Type: <strong>External</strong></li>
+<li>App name: <code class="inline">Studioflow</code></li>
+<li>Support email: your email</li>
+<li>Authorized domains: your app's domain</li>
+<li>Application type: <strong>Web application</strong></li>
+<li>Name: <code class="inline">Studioflow Web</code></li>
+<li>Authorized redirect URIs: <code class="inline">https://your-app-url.com/api/v1/auth/google/callback</code></li>
+<li>Click <strong>Create</strong> and copy the <strong>Client ID</strong> and <strong>Client Secret</strong></li>
+</ol>
+<h3>What to give the developer:</h3>
+<ul>
+<li><strong>Client ID</strong> — looks like <code class="inline">123456-abcdef.apps.googleusercontent.com</code></li>
+<li><strong>Client Secret</strong> — a shorter string</li>
+</ul>
+<blockquote>💡 <strong>These go into the app as:</strong></blockquote>
+<blockquote><code class="inline">GOOGLE_CLIENT_ID=123456-abcdef.apps.googleusercontent.com</code></blockquote>
+<blockquote><code class="inline">GOOGLE_CLIENT_SECRET=GOCSPX-...</code></blockquote>
+<h3>Cost:</h3>
+<ul>
+<li>Completely free for the APIs we use</li>
+</ul>
+<hr>
+<h2>6. 🟢 Google Gemini (AI Features)</h2>
+<h3>What is it?</h3>
+<p>Gemini is Google's AI that powers smart features in the app — like <strong>writing email drafts</strong>, <strong>generating social media captions</strong>, and <strong>scoring leads</strong> (guessing which contacts are most likely to buy).</p>
+<h3>How to sign up:</h3>
+<ol>
+<li>Go to <strong><a href="https://aistudio.google.com" target="_blank">aistudio.google.com</a></strong></li>
+<li>Sign in with your Google account</li>
+<li>Click <strong>"Get API Key"</strong> (in the left sidebar)</li>
+<li>Click <strong>"Create API Key"</strong></li>
+<li>Select your Google Cloud project (the <code class="inline">Studioflow</code> one from Step 5, or create a new one)</li>
+<li>Copy the API key</li>
+</ol>
+<h3>What to give the developer:</h3>
+<ul>
+<li><strong>API Key</strong> — a long string</li>
+</ul>
+<blockquote>💡 <strong>This goes into the app as:</strong></blockquote>
+<blockquote><code class="inline">GEMINI_API_KEY=AIza...</code></blockquote>
+<h3>Free tier limits:</h3>
+<ul>
+<li>15 requests per minute</li>
+<li>1 million tokens per day (that's a LOT of text — you won't hit this)</li>
+</ul>
+<hr>
+<h2>7. 🟢 Sentry (Error Tracking)</h2>
+<h3>What is it?</h3>
+<p>Sentry is like a <strong>security camera for bugs</strong>. If something breaks in the app, Sentry automatically catches it and sends you an alert with details about what went wrong. Super helpful for fixing bugs before customers complain.</p>
+<h3>How to sign up:</h3>
+<ol>
+<li>Go to <strong><a href="https://sentry.io" target="_blank">sentry.io</a></strong></li>
+<li>Click <strong>"Start for Free"</strong></li>
+<li>Sign up with GitHub, Google, or email</li>
+<li>Create a new project:</li>
+<li>Platform: <strong>Next.js</strong></li>
+<li>Project name: <code class="inline">studioflow</code></li>
+<li>Copy the <strong>DSN</strong> (Data Source Name) — it's on the setup page</li>
+</ol>
+<h3>What to give the developer:</h3>
+<ul>
+<li><strong>DSN</strong> — looks like <code class="inline">https://abc123@o456.ingest.sentry.io/789</code></li>
+</ul>
+<blockquote>�� <strong>This goes into the app as:</strong></blockquote>
+<blockquote><code class="inline">SENTRY_DSN=https://abc123@o456.ingest.sentry.io/789</code></blockquote>
+<h3>Free tier limits:</h3>
+<ul>
+<li>5,000 errors per month</li>
+<li>10,000 performance transactions per month</li>
+<li>1 GB of attachments</li>
+</ul>
+<hr>
+<h2>8. 🟢 Tawk.to (Live Chat)</h2>
+<h3>What is it?</h3>
+<p>Tawk.to adds a <strong>little chat bubble</strong> to the bottom-right corner of your app. Visitors and clients can click it to chat with you in real-time. You can reply from the Tawk.to app on your phone or desktop.</p>
+<h3>How to sign up:</h3>
+<ol>
+<li>Go to <strong><a href="https://www.tawk.to" target="_blank">tawk.to</a></strong></li>
+<li>Click <strong>"Sign Up Free"</strong></li>
+<li>Fill in your info</li>
+<li>It creates a default "property" (your chat widget)</li>
+<li>Go to <strong>Administration → Chat Widget</strong></li>
+<li>You'll see your <strong>Property ID</strong> and <strong>Widget ID</strong> in the embed code URL:</li>
+<p><code class="inline">https://embed.tawk.to/PROPERTY_ID/WIDGET_ID</code></p>
+</ol>
+<h3>What to give the developer:</h3>
+<ul>
+<li><strong>Property ID</strong> — a hex string like <code class="inline">64a1b2c3d4e5f6</code></li>
+<li><strong>Widget ID</strong> — usually <code class="inline">1h...</code> or similar</li>
+</ul>
+<blockquote>💡 <strong>These go into the app as:</strong></blockquote>
+<blockquote><code class="inline">NEXT_PUBLIC_TAWKTO_PROPERTY_ID=64a1b2c3d4e5f6</code></blockquote>
+<blockquote><code class="inline">NEXT_PUBLIC_TAWKTO_WIDGET_ID=1h...</code></blockquote>
+<h3>Cost:</h3>
+<ul>
+<li>Completely free, unlimited agents, unlimited chats</li>
+</ul>
+<hr>
+<h2>9. 🟢 Firebase (Push Notifications)</h2>
+<h3>What is it?</h3>
+<p>Firebase lets the app <strong>send push notifications</strong> to your phone or desktop — like "New appointment booked!" or "Invoice #42 was paid!" — even when you're not looking at the app.</p>
+<h3>How to sign up:</h3>
+<ol>
+<li>Go to <strong><a href="https://console.firebase.google.com" target="_blank">console.firebase.google.com</a></strong></li>
+<li>Sign in with your Google account</li>
+<li>Click <strong>"Add project"</strong> → Name: <code class="inline">Studioflow</code></li>
+<li>Disable Google Analytics (not needed) → Click <strong>"Create project"</strong></li>
+<li>After creation, go to <strong>Project Settings</strong> (gear icon) → <strong>Cloud Messaging</strong> tab</li>
+<li>If you see "Cloud Messaging API (Legacy)" — click the three dots → <strong>Enable</strong></li>
+<li>Copy the <strong>Server key</strong></li>
+</ol>
+<h3>What to give the developer:</h3>
+<ul>
+<li><strong>Server Key</strong> — a very long string</li>
+</ul>
+<blockquote>💡 <strong>This goes into the app as:</strong></blockquote>
+<blockquote><code class="inline">FIREBASE_SERVER_KEY=AAAA...</code></blockquote>
+<h3>Cost:</h3>
+<ul>
+<li>Completely free for Cloud Messaging (unlimited notifications)</li>
+</ul>
+<hr>
+<h2>10. 🟢 Custom Domain (Optional)</h2>
+<h3>What is it?</h3>
+<p>Instead of your app living at <code class="inline">studioflow-abc123.vercel.app</code>, you can use your own domain like <code class="inline">app.yourstudio.com</code> or <code class="inline">crm.yourstudio.com</code>.</p>
+<h3>How to set up:</h3>
+<ol>
+<li><strong>Buy a domain</strong> if you don't have one:</li>
+<li><a href="https://namecheap.com" target="_blank">Namecheap</a> — ~$10-12/year</li>
+<li><a href="https://domains.google.com" target="_blank">Google Domains</a> — ~$12/year</li>
+<li><a href="https://godaddy.com" target="_blank">GoDaddy</a> — ~$10-20/year</li>
+<li>In <strong>Vercel</strong>, go to your project → <strong>Settings → Domains</strong></li>
+<li>Type your domain (e.g., <code class="inline">app.yourstudio.com</code>) → Click <strong>Add</strong></li>
+<li>Vercel will give you <strong>DNS records</strong> to add</li>
+<li>In your domain registrar (Namecheap, etc.), add those records</li>
+<li>Wait 5-30 minutes for DNS to update</li>
+<li>✅ Done! Your app is now at your custom domain with free SSL</li>
+</ol>
+<hr>
+<h2>Master Checklist</h2>
+<p>Print this out and check off each one as you go:</p>
+<pre class="code-block"><code>
+[ ] 1. Supabase — Created project, copied URL + Anon Key
+[ ] 2. Vercel — Signed up, connected to GitHub
+[ ] 3. Square — Created dev app, copied Access Token + Webhook Signature Key
+[ ] 4. Resend — Created account, copied API Key
+[ ] 5. Google Cloud — Enabled Drive + Calendar APIs, created OAuth credentials
+[ ] 6. Gemini — Created API key
+[ ] 7. Sentry — Created project, copied DSN
+[ ] 8. Tawk.to — Created account, copied Property ID + Widget ID
+[ ] 9. Firebase — Created project, copied Server Key
+[ ] 10. Custom Domain — Bought domain, connected to Vercel
+</code></pre>
+<hr>
+<h2>All Environment Variables (Give These to Your Developer)</h2>
+<p>Once you've signed up for everything, your developer needs these values. Copy this template and fill in each one:</p>
+<pre class="code-block"><code>
+# 🔴 REQUIRED
+NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJ...
+
+# 🟡 HIGH PRIORITY
+SQUARE_ACCESS_TOKEN=EAAAl...
+SQUARE_ENVIRONMENT=production
+SQUARE_WEBHOOK_SIGNATURE_KEY=your-signature-key
+RESEND_API_KEY=re_...
+GOOGLE_CLIENT_ID=123456-abc.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=GOCSPX-...
+
+# 🟢 NICE TO HAVE
+GEMINI_API_KEY=AIza...
+SENTRY_DSN=https://abc@o123.ingest.sentry.io/456
+NEXT_PUBLIC_TAWKTO_PROPERTY_ID=64a1b2c3d4e5f6
+NEXT_PUBLIC_TAWKTO_WIDGET_ID=1h...
+FIREBASE_SERVER_KEY=AAAA...
+
+# 🟢 AFTER DEPLOYMENT
+NEXT_PUBLIC_APP_URL=https://your-custom-domain.com
+</code></pre>
+<hr>
+<blockquote><strong>Questions?</strong> Just ask! None of this is scary — it's all free sign-ups with big "Create Account" buttons. The whole process takes about 60-90 minutes if you do everything in one sitting. ☕</blockquote>
+</div>
+<button class="print-btn" onclick="window.print()">🖨️ Print / Save PDF</button>
+</body>
+</html>
