@@ -17,12 +17,13 @@ Studioflow is a full-featured CRM (Customer Relationship Management) platform de
 
 | Metric | Count |
 |---|---|
-| Pages | 28 |
-| Components | 68+ |
+| Pages | 30+ |
+| Components | 70+ |
 | Custom Hooks | 20 |
 | API Routes | 8 |
-| Database Migrations | 6 |
+| Database Migrations | 8 |
 | Zustand Stores | 3 |
+| Tests | 96 (unit + component) |
 
 ---
 
@@ -47,6 +48,8 @@ Studioflow is a full-featured CRM (Customer Relationship Management) platform de
 | **Settings** | Org config, profile, integrations, notification preferences |
 | **Client Portal** | Branded portal with login, appointments, invoices, messages, gallery |
 | **PWA** | Installable app with service worker, offline fallback page |
+| **Admin Panel** | Super-admin dashboard, support ticket management |
+| **Support** | In-app support widget, ticket submission system |
 
 ---
 
@@ -93,21 +96,23 @@ Open [http://localhost:3000](http://localhost:3000) to see the app.
 src/
   app/              # Next.js App Router pages
     (auth)/          # Login, signup, forgot-password
-    (app)/           # Authenticated CRM (17 pages)
+    (app)/           # Authenticated CRM (18 pages)
+    (admin)/         # Super-admin panel (2 pages)
     (portal)/        # Client portal (6 pages)
     (public)/        # Public forms
-    api/v1/          # REST API routes (8 endpoints)
+    api/v1/          # REST API routes (9 endpoints)
   components/        # UI components (68+ files)
   hooks/             # Custom React hooks (20 files)
   stores/            # Zustand stores (3 files)
   types/             # TypeScript type definitions
   lib/               # Supabase, Gemini, Square, utilities
 supabase/
-  migrations/        # 6 versioned SQL migrations
+  migrations/        # 8 versioned SQL migrations
 public/
   manifest.json      # PWA manifest
   sw.js              # Service worker
   offline.html       # Offline fallback
+tests/               # Unit, component, and E2E tests (96)
 docs/                # Project documentation
 ```
 
@@ -135,6 +140,27 @@ docs/                # Project documentation
 | `SQUARE_ACCESS_TOKEN` | Square access token (optional, for payments) |
 | `SQUARE_WEBHOOK_SIGNATURE_KEY` | Square webhook signature key |
 | `RESEND_API_KEY` | Resend API key (optional, for email sending) |
+| `SQUARE_ENVIRONMENT` | Square environment: `sandbox` or `production` |
+| `SENTRY_DSN` | Sentry DSN (optional, for error tracking) |
+| `NEXT_PUBLIC_TAWKTO_PROPERTY_ID` | Tawk.to property ID (optional, for live chat) |
+| `FIREBASE_SERVER_KEY` | Firebase server key (optional, for push notifications) |
+
+---
+
+## Testing
+
+```bash
+pnpm test          # Run unit + component tests (96 passing)
+pnpm test:e2e      # Run Playwright E2E tests
+```
+
+---
+
+## Repository
+
+```
+https://github.com/gojugrappler-hash/Studioflow
+```
 
 ---
 
@@ -143,4 +169,5 @@ docs/                # Project documentation
 ```bash
 pnpm build
 # Compiled successfully — 40 routes, zero errors
+# 96 tests passing
 ```
